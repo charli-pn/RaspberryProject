@@ -1,3 +1,4 @@
+<nav class="">
 <ul>
     <li>
         <a href = "">Play music</a>
@@ -6,3 +7,4 @@
         <a href = "">Upload Music</a>
     </li>
 </ul>
+</nav>
