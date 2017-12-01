@@ -12,10 +12,16 @@
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <h1>Let's play some music !</h1>
+        <header>
+            <h1>Let's play some music !</h1>
+        </header>
         <?php require_once("menu.php"); ?>
         <?php require_once("play.php"); ?>
+<<<<<<< Updated upstream
     
     
     
     </body>
+=======
+    
+>>>>>>> Stashed changes
