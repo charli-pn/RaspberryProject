@@ -16,7 +16,7 @@ const DESCRI = "KyaPlay web page";
 define('PATH_CONTROLLERS','./controllers/');
 define('PATH_ASSETS','./assets/');
 
-//define('PATH_LIB','./lib/');
+define('PATH_LIB','./lib/');
 define('PATH_MODELS','./models/');
 define('PATH_VIEWS','./views/');
 define('PATH_SCRIPTS','./scripts/');
@@ -27,3 +27,4 @@ define('PATH_ENTITY','./entity/');
 define('PATH_CSS', PATH_ASSETS.'css/');
 define('PATH_JS', PATH_ASSETS.'js/');
 define('PATH_IMAGES', PATH_ASSETS.'images/');
+define('PATH_AUDIO', PATH_ASSETS.'audio/');
