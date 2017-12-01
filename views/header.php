@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>KyaPlay !</title>
-        <link rel="icon" type="image/jpeg" href="<?=PATH_ASSETS."title.jpg"?>" />
+        <link rel="icon" type="image/gif" href="<?=PATH_IMAGES."icon.gif"?>" />
         <meta charset="utf-8">
         <link rel="stylesheet" href="<?=PATH_ASSETS."css/materialize.css"?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
