@@ -4,10 +4,10 @@
         <title>KyaPlay !</title>
         <link rel="icon" type="image/gif" href="<?=PATH_IMAGES."icon.gif"?>" />
         <meta charset="utf-8">
-        <link rel="stylesheet" href="<?=PATH_ASSETS."css/materialize.css"?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="<?=PATH_ASSETS."css/materialize.min.css"?>"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="<?=PATH_ASSETS."css/materialize.css"?>" media="screen">
+        <link type="text/css" rel="stylesheet" href="<?=PATH_ASSETS."css/materialize.min.css"?>"  media="screen"/>
     </head>
     
     <body>

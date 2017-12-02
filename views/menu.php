@@ -1,7 +1,7 @@
 
-<nav class="red" role="navigation">
+<nav class="red" role="navigation nav-extended">
     <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">KyaPlay</a>
-        <ul class = "right">
+        <ul class="right hide-on-med-and-down">
             <li class="active">
                 <a href = "">Play music</a>
             </li>
@@ -9,6 +9,16 @@
                 <a href = "">Upload Music</a>
             </li>
         </ul>
+        
+        <ul id="nav-mobile" class="side-nav">
+            <li>
+                <a href = "">Play music</a>
+            </li>
+            <li>
+                <a href = "">Upload Music</a>
+            </li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 
 </nav>
