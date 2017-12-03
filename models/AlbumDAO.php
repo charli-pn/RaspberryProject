@@ -15,5 +15,13 @@ class AlbumDAO extends DAO {
             return DAO::getErreur();
         }
     }
+    
+    public function getAlbumWithId($idAlbum) {
+        if ($req = DAO::queryRow("SELECT * FROM album WHERE idAlbum=$idAlbum")) {
+            return new Album($req['idAlbum'], $req['title'], $req['autor'], $req['picture']);
+        } else {
+            return DAO::getErreur();
+        }
+    }
 
 }
