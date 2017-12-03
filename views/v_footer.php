@@ -1,3 +1,6 @@
+            </div>
+        </section>
+
 <footer class="page-footer red">
     <div class="container">
         <div class="row">
@@ -27,15 +30,15 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <?=AUTEUR?>
+            <?= AUTEUR ?>
         </div>
     </div>
 </footer>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="./assets/js/materialize.js"></script>
-  <script src="./assets/js/init.js"></script>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./assets/js/materialize.js"></script>
+<script src="./assets/js/init.js"></script>
 
 </body>
 

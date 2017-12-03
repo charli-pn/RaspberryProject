@@ -13,12 +13,12 @@ const AUTEUR = 'CHARLOTE - FLORIAN - KYLE - SICHIALUN';
 const DESCRI = "KyaPlay web page";
 
 //dossiers racines du site
-define('PATH_CONTROLLERS','./controllers/');
+define('PATH_CONTROLLERS','./controllers/c_');
 define('PATH_ASSETS','./assets/');
 
 define('PATH_LIB','./lib/');
 define('PATH_MODELS','./models/');
-define('PATH_VIEWS','./views/');
+define('PATH_VIEWS','./views/v_');
 define('PATH_SCRIPTS','./scripts/');
 define('PATH_TEXTES','./languages/');
 define('PATH_ENTITY','./entity/');

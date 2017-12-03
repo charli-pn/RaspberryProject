@@ -1,3 +1,5 @@
+<?php require_once(PATH_VIEWS."header.php"); ?>
+
 <audio id="myAudio">
     <source src="<?=PATH_AUDIO?>fun.mp3" type="audio/mpeg" preload="auto">
     Votre navigateur ne prend pas en charge la balise audio.
@@ -137,3 +139,5 @@ function myFunction() {
 }
 
 </script>
+
+<?php require_once(PATH_VIEWS."footer.php"); ?>
