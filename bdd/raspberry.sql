@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 03 Décembre 2017 à 13:00
+-- Généré le :  Dim 03 Décembre 2017 à 13:18
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -38,8 +38,8 @@ CREATE TABLE `album` (
 --
 
 INSERT INTO `album` (`idAlbum`, `title`, `autor`, `picture`) VALUES
-(1, 'La fête est finie', 'Orelsan', 'LaFeteEstFinie.png'),
-(2, 'All Eyez On Me', '2Pac', 'AllEyezOnMe.png');
+(1, 'La fête est finie', 'Orelsan', 'LaFeteEstFinie.jpg'),
+(2, 'All Eyez On Me', '2Pac', 'AllEyezOnMe.jpg');
 
 -- --------------------------------------------------------
 
