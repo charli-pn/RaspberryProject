@@ -1,6 +1,7 @@
 <?php
 
-define('ADD_PAGE','index.php?page=add');
-define('PLAY_PAGE','index.php?page=play');
+define('PAGE','index.php?page=');
+define('ADD_PAGE',PAGE.'add');
+define('PLAY_PAGE',PAGE.'play');
 
 ?>

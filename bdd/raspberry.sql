@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 01 Décembre 2017 à 13:54
+-- Généré le :  Dim 03 Décembre 2017 à 13:00
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `rasperry`
+-- Base de données :  `raspberry`
 --
 
 -- --------------------------------------------------------
@@ -66,7 +66,6 @@ INSERT INTO `category` (`idCategory`, `title`) VALUES
 --
 
 CREATE TABLE `song` (
-  `idSong` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `autor` varchar(255) NOT NULL,
   `duration` varchar(8) NOT NULL,
@@ -78,9 +77,9 @@ CREATE TABLE `song` (
 -- Contenu de la table `song`
 --
 
-INSERT INTO `song` (`idSong`, `title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
-(2, 'Paradis', 'Orelsan', '3:06', 1, 1),
-(3, 'Heartz Of Men', '2Pac', '4:43', 2, 1);
+INSERT INTO `song` (`title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
+('Heartz Of Men', '2Pac', '4:43', 2, 1),
+('Paradis', 'Orelsan', '3:06', 1, 1);
 
 --
 -- Index pour les tables exportées
@@ -102,20 +101,11 @@ ALTER TABLE `category`
 -- Index pour la table `song`
 --
 ALTER TABLE `song`
-  ADD PRIMARY KEY (`idSong`),
+  ADD PRIMARY KEY (`title`),
   ADD KEY `idAlbum` (`idAlbum`),
   ADD KEY `idAlbum_2` (`idAlbum`),
   ADD KEY `idCategory` (`idCategory`);
 
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `song`
---
-ALTER TABLE `song`
-  MODIFY `idSong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Contraintes pour les tables exportées
 --

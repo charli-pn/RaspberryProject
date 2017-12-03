@@ -5,6 +5,11 @@
  
 const DEBUG = true; // production : false; dev : true
 
+const BD_HOST = 'localhost';
+const BD_DBNAME = 'raspberry';
+const BD_USER = 'root';
+const BD_PWD = '';
+
 // Langue du site
 const LANG ='en-GB';
 
