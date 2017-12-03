@@ -3,7 +3,10 @@
         <a id="logo-container" href="index.php" class="brand-logo">KyaPlay</a>
         <ul class="right hide-on-med-and-down">
             <li <?= ($page=='welcome') ? 'class="active"':'' ?>>
-                <a href = "index.php">Your music</a>
+                <a href = "index.php">Your albums</a>
+            </li>
+            <li <?= ($page=='play') ? 'class="active"':'' ?>>
+                <a href = "<?= PLAY_PAGE ?>">Play Music</a>
             </li>
             <li <?= ($page=='add') ? 'class="active"':'' ?>>
                 <a href = "<?= ADD_PAGE ?>">Upload Music</a>
@@ -12,7 +15,10 @@
         
         <ul id="nav-mobile" class="side-nav">
             <li <?= ($page==='welcome') ? 'class="active"':'' ?>>
-                <a href = "index.php">Your music</a>
+                <a href = "index.php">Your albums</a>
+            </li>
+            <li <?= ($page=='play') ? 'class="active"':'' ?>>
+                <a href = "<?= PLAY_PAGE ?>">Play Music</a>
             </li>
             <li <?= ($page==='add') ? 'class="active"':'' ?>>
                 <a href = "<?= ADD_PAGE ?>">Upload Music</a>

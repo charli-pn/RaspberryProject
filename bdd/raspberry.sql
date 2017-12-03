@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 03 Décembre 2017 à 13:18
+-- Généré le :  Dim 03 Décembre 2017 à 18:39
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -78,8 +78,9 @@ CREATE TABLE `song` (
 --
 
 INSERT INTO `song` (`title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
-('Heartz Of Men', '2Pac', '4:43', 2, 1),
-('Paradis', 'Orelsan', '3:06', 1, 1);
+('Basique.mp3', 'Orelsan', '2:43', 1, 1),
+('Heartz Of Men.mp3', '2Pac', '4:43', 2, 1),
+('Paradis.mp3', 'Orelsan', '3:06', 1, 1);
 
 --
 -- Index pour les tables exportées
