@@ -2,20 +2,26 @@
 
 class Song {
 
+    private $_idSong;
     private $_title;
     private $_autor;
     private $_duration;
     private $_idAlbum;
     private $_idCategory;
     
-    function __construct($_title, $_autor, $_duration, $_idAlbum, $_idCategory) {
+    function __construct($_idSong, $_title, $_autor, $_duration, $_idAlbum, $_idCategory) {
+        $this->_idSong = $_idSong;
         $this->_title = $_title;
         $this->_autor = $_autor;
         $this->_duration = $_duration;
         $this->_idAlbum = $_idAlbum;
         $this->_idCategory = $_idCategory;
     }
- 
+
+    function get_idSong() {
+        return $this->_idSong;
+    }
+
     function get_title() {
         return $this->_title;
     }
@@ -34,6 +40,10 @@ class Song {
 
     function get_idCategory() {
         return $this->_idCategory;
+    }
+
+    function set_idSong($_idSong) {
+        $this->_idSong = $_idSong;
     }
 
     function set_title($_title) {
@@ -55,9 +65,5 @@ class Song {
     function set_idCategory($_idCategory) {
         $this->_idCategory = $_idCategory;
     }
-
-
-
-
 
 }

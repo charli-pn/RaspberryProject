@@ -5,6 +5,15 @@ require_once(PATH_ENTITY. 'Album.php');
 
 class AlbumDAO extends DAO {
 
+        
+    public function getFirstSong($idAlbum) {
+        if ($req = DAO::queryRow("SELECT idSong FROM song WHERE idAlbum=$idAlbum LIMIT 1")) {
+            return $req[0];
+        } else {
+            return DAO::getErreur();
+        }
+    }
+    
     public function getAllAlbums() {
         if ($req = DAO::queryAll('SELECT * FROM album')) {
             foreach ($req as $alb) {

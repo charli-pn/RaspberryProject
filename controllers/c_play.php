@@ -6,22 +6,21 @@ require_once(PATH_MODELS.'AlbumDAO.php');
 $song = new SongDAO(true);
 $album = new AlbumDAO(true);
 
-
-if(isset($_GET['alb']) && isset($_GET['song'])) {
-    $idAlbum = (int)htmlspecialchars($_GET['alb']);
-    $songsToDisplay = $song->getSongs($idAlbum);
-    $albumToDisplay = $album->getAlbumWithId($idAlbum);
-}
-else {
-    $songsToDisplay = $song->getAllSongs();
-}
-
-/*if(isset($_GET['song'])) {
-    $idSong = (int)htmlspecialchars($_GET['song']);
-    $currentSongPic = $song->getPictureAlbum($idSong);
+if(isset($_GET['song'])){
+    $currentSongId = (int) htmlspecialchars($_GET['song']);
+    $songsToDisplay = $song->getAlbumSongs($currentSongId);
+    $songInfos = $song->getSongInfos($currentSongId);
+    $albumTitle = $songInfos['albumTitle'];
 }
 else{
-    
-}   */
+    $songsToDisplay = $song->getAllSongs();
+    $currentSong = $songsToDisplay[0];
+    $currentSongId = $currentSong->get_idSong();
+    $songInfos = $song->getSongInfos($currentSongId);
+    $albumTitle = 'Your music';
+}
+
+$extensionTitle = $songInfos['songTitle'];
+$noExtensionTitle = substr($extensionTitle, 0, strripos($extensionTitle, '.'));
 
 require_once(PATH_VIEWS.'play.php');
