@@ -26,5 +26,13 @@ class SongDAO extends DAO {
             return DAO::getErreur();
         }
     }
+    
+    public function getPictureAlbum($idSong) {
+        if ($req = DAO::queryRow("SELECT s.title AS title, a.picture AS picutre FROM song s JOIN Album a ON s.idAlbum=a.idAlbum WHERE s.idSong=$idSong")) {
+            return $res;
+        } else {
+            return DAO::getErreur();
+        }
+    }
 
 }

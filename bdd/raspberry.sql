@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 03 Décembre 2017 à 18:39
+-- Généré le :  Lun 04 Décembre 2017 à 14:40
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -38,8 +38,8 @@ CREATE TABLE `album` (
 --
 
 INSERT INTO `album` (`idAlbum`, `title`, `autor`, `picture`) VALUES
-(1, 'La fête est finie', 'Orelsan', 'LaFeteEstFinie.jpg'),
-(2, 'All Eyez On Me', '2Pac', 'AllEyezOnMe.jpg');
+(1, 'Jingle Punks', 'Jingle Punks', 'Jingle Punks.png'),
+(2, 'Otis McDonald', 'Otis McDonald', 'Otis McDonald.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`idCategory`, `title`) VALUES
-(1, 'Rap');
+(1, 'Funk');
 
 -- --------------------------------------------------------
 
@@ -78,9 +78,14 @@ CREATE TABLE `song` (
 --
 
 INSERT INTO `song` (`title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
-('Basique.mp3', 'Orelsan', '2:43', 1, 1),
-('Heartz Of Men.mp3', '2Pac', '4:43', 2, 1),
-('Paradis.mp3', 'Orelsan', '3:06', 1, 1);
+('Bayou_State_of_Mind_Sting.mp3', 'Jingle Punks', '00:06', 1, 1),
+('Dusty_Road.mp3', 'Jingle Punks', '01:21', 1, 1),
+('Ever_Felt_pt_1.mp3', 'Otis McDonald', '02:23', 2, 1),
+('Green_Leaf_Stomp.mp3', 'Jingle Punks', '01:15', 1, 1),
+('Put_It_On_The_Floor.mp3', 'Otis McDonald', '01:55', 2, 1),
+('Safari_Time.mp3', 'Jingle Punks', '01:14', 1, 1),
+('Scarlet_Fire.mp3', 'Otis McDonald', '02:22', 2, 1),
+('Suddenly.mp3', 'Otis McDonald', '02:11', 2, 1);
 
 --
 -- Index pour les tables exportées
