@@ -14,7 +14,7 @@ const BD_PWD = '';
 const LANG ='en-GB';
 
 // Paramètres du site : nom de l'auteur
-const AUTEUR = 'CHARLOTE - FLORIAN - KYLE - SICHIALUN'; 
+const AUTEUR = 'CHARLOTTE - FLORIAN - KYLE - SICHIALUN'; 
 const DESCRI = "KyaPlay web page";
 
 //dossiers racines du site
