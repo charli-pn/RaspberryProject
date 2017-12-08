@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 04 Décembre 2017 à 14:40
+-- Généré le :  Ven 08 Décembre 2017 à 12:52
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -66,6 +66,7 @@ INSERT INTO `category` (`idCategory`, `title`) VALUES
 --
 
 CREATE TABLE `song` (
+  `idSong` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `autor` varchar(255) NOT NULL,
   `duration` varchar(8) NOT NULL,
@@ -77,15 +78,15 @@ CREATE TABLE `song` (
 -- Contenu de la table `song`
 --
 
-INSERT INTO `song` (`title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
-('Bayou_State_of_Mind_Sting.mp3', 'Jingle Punks', '00:06', 1, 1),
-('Dusty_Road.mp3', 'Jingle Punks', '01:21', 1, 1),
-('Ever_Felt_pt_1.mp3', 'Otis McDonald', '02:23', 2, 1),
-('Green_Leaf_Stomp.mp3', 'Jingle Punks', '01:15', 1, 1),
-('Put_It_On_The_Floor.mp3', 'Otis McDonald', '01:55', 2, 1),
-('Safari_Time.mp3', 'Jingle Punks', '01:14', 1, 1),
-('Scarlet_Fire.mp3', 'Otis McDonald', '02:22', 2, 1),
-('Suddenly.mp3', 'Otis McDonald', '02:11', 2, 1);
+INSERT INTO `song` (`idSong`, `title`, `autor`, `duration`, `idAlbum`, `idCategory`) VALUES
+(1, 'Bayou_State_of_Mind_Sting.mp3', 'Jingle Punks', '00:06', 1, 1),
+(2, 'Dusty_Road.mp3', 'Jingle Punks', '01:21', 1, 1),
+(3, 'Ever_Felt_pt_1.mp3', 'Otis McDonald', '02:23', 2, 1),
+(4, 'Green_Leaf_Stomp.mp3', 'Jingle Punks', '01:15', 1, 1),
+(5, 'Put_It_On_The_Floor.mp3', 'Otis McDonald', '01:55', 2, 1),
+(6, 'Safari_Time.mp3', 'Jingle Punks', '01:14', 1, 1),
+(7, 'Scarlet_Fire.mp3', 'Otis McDonald', '02:22', 2, 1),
+(8, 'Suddenly.mp3', 'Otis McDonald', '02:11', 2, 1);
 
 --
 -- Index pour les tables exportées
@@ -107,11 +108,19 @@ ALTER TABLE `category`
 -- Index pour la table `song`
 --
 ALTER TABLE `song`
-  ADD PRIMARY KEY (`title`),
+  ADD PRIMARY KEY (`idSong`),
   ADD KEY `idAlbum` (`idAlbum`),
-  ADD KEY `idAlbum_2` (`idAlbum`),
   ADD KEY `idCategory` (`idCategory`);
 
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `song`
+--
+ALTER TABLE `song`
+  MODIFY `idSong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Contraintes pour les tables exportées
 --
