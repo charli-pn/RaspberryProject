@@ -6,7 +6,7 @@
                 <a href = "index.php">Your albums</a>
             </li>
             <li <?= ($page=='play') ? 'class="active"':'' ?>>
-                <a href = "<?= PLAY_PAGE ?>">Play Music</a>
+                <a href = "<?= PLAY_PAGE_ALL ?>">Play Music</a>
             </li>
             <li <?= ($page=='add') ? 'class="active"':'' ?>>
                 <a href = "<?= ADD_PAGE ?>">Upload Music</a>
@@ -18,7 +18,7 @@
                 <a href = "index.php">Your albums</a>
             </li>
             <li <?= ($page=='play') ? 'class="active"':'' ?>>
-                <a href = "<?= PLAY_PAGE ?>">Play Music</a>
+                <a href = "<?= PLAY_PAGE_ALL ?>">Play Music</a>
             </li>
             <li <?= ($page==='add') ? 'class="active"':'' ?>>
                 <a href = "<?= ADD_PAGE ?>">Upload Music</a>

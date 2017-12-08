@@ -31,10 +31,12 @@
             <?php
             foreach ($songsToDisplay as $song) {
                 $songTitle = $song->get_title();
+                $href=(isset($all)) ? '&all=1': '';
                 ?>
                 <li class="collection-item">
-                    <div><?= substr($songTitle, 0, strripos($songTitle, '.')) ?>
-                        <a href="<?= PLAY_SONG_PAGE . $song->get_idSong() ?>" class="secondary-content">
+                    <div><?= substr($songTitle, 0, strripos($songTitle, '.')); 
+                        ?>
+                        <a href="<?= PLAY_SONG_PAGE . $song->get_idSong() . $href ?>" class="secondary-content">
                             <i class="material-icons">play_arrow</i>
                         </a>
                     </div>
