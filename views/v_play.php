@@ -6,10 +6,11 @@
 </audio>
 
 <div class="row">
-    <div class="col s12 m6">
+    <div class="col s12 m4">
         <div class="card">
-            <div class="grey darken-2 card-image">
+            <div class="card-image">
                 <img src="<?= PATH_IMAGES . $songInfos['picture'] ?>" onClick="togglePlay()">
+                <a class="btn-floating red btn-small"><i class="material-icons">mode_edit</i></a>
                 <a class="waves-effect waves-light" onClick="togglePlay()"></a>
                 <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" onClick="togglePlay()"><i class="material-icons" id="PausePlay">play_arrow</i></a>
             </div>
