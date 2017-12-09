@@ -15,7 +15,7 @@ if(isset($_GET['song']) && !isset($_GET['all'])){
 else{
     $all = 1;
     $songsToDisplay = $song->getAllSongs();
-    if(isset($_GET['song']) && (int)htmlspecialchars($_GET['all']) == 1) {
+    if(isset($_GET['song'])) {
         $currentSongId = (int) htmlspecialchars($_GET['song']);
     }
     else{
