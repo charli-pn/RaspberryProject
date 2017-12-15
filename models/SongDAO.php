@@ -62,4 +62,12 @@ class SongDAO extends DAO {
         }                
     }
 
+    public function uploadSong($title) {
+        if ($req = DAO::queryBdd('INSERT INTO song VALUES (NULL,"' .$title. '")')) {
+            return $req; 
+        } else {
+            return DAO::getErreur();
+        }
+    }
+
 }
