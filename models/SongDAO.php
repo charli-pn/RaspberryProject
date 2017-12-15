@@ -54,4 +54,12 @@ class SongDAO extends DAO {
         }
     }
 
+    public function updatePicture($idAlbum,$picture) {
+        if ($req = DAO::queryBdd('UPDATE album SET picture = " '.$picture.' " WHERE idAlbum = " '.$idAlbum.' " ')) {
+            return $req;
+        } else {
+            return DAO::getErreur();
+        }                
+    }
+
 }
