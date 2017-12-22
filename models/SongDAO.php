@@ -16,7 +16,7 @@ class SongDAO extends DAO {
     public function getAlbumSongs($idSong) {
         if ($req = DAO::queryAll("SELECT * FROM song WHERE idAlbum = (SELECT idAlbum FROM song WHERE idSong=$idSong)")) {
             foreach ($req as $song) {
-                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum'], $song['idCategory']);
+                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum']);
             }
             return $res;
         } else {
@@ -27,7 +27,7 @@ class SongDAO extends DAO {
     public function getAllSongs() {
         if ($req = DAO::queryAll("SELECT * FROM song ORDER BY autor")) {
             foreach ($req as $song) {
-                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum'], $song['idCategory']);
+                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum']);
             }
             return $res;
         } else {
@@ -38,7 +38,7 @@ class SongDAO extends DAO {
     public function getSongs($idAlbum) {
         if ($req = DAO::queryAll("SELECT * FROM song WHERE idAlbum=$idAlbum")) {
             foreach ($req as $song) {
-                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum'], $song['idCategory']);
+                $res[] = new Song($song['idSong'], $song['title'], $song['autor'], $song['duration'], $song['idAlbum']);
             }
             return $res;
         } else {
@@ -62,12 +62,8 @@ class SongDAO extends DAO {
         }                
     }
 
-    public function uploadSong($title) {
-        if ($req = DAO::queryBdd('INSERT INTO song VALUES (NULL,"' .$title. '")')) {
-            return $req; 
-        } else {
-            return DAO::getErreur();
-        }
+    public function add($title, $autor, $duration, $idAlbum) {
+        return DAO::queryBdd("INSERT INTO song VALUES(NULL,'$title','$autor','$duration','$idAlbum')");
     }
 
 }

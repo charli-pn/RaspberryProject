@@ -6,6 +6,30 @@ require_once(PATH_ENTITY. 'Album.php');
 class AlbumDAO extends DAO {
 
         
+    public function add($title, $autor, $picture) {
+        return DAO::queryBdd("INSERT INTO album VALUES(NULL,'$title','$autor','$picture')");
+    }
+    
+    public function exist($title) {
+        if ($req = DAO::queryRow("SELECT COUNT(*) FROM album WHERE title='$title'")) {
+            return $req[0];
+        } else {
+            return DAO::getErreur();
+        }
+    }
+    
+    public function lastInserted() {
+        return DAO::insertId();
+    }
+    
+    public function getIdAlbum($title) {
+        if ($req = DAO::queryRow("SELECT idAlbum FROM album WHERE title='$title'")) {
+            return $req[0];
+        } else {
+            return DAO::getErreur();
+        }
+    }
+    
     public function getFirstSong($idAlbum) {
         if ($req = DAO::queryRow("SELECT idSong FROM song WHERE idAlbum=$idAlbum LIMIT 1")) {
             return $req[0];

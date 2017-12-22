@@ -27,6 +27,7 @@ define('PATH_VIEWS','./views/v_');
 define('PATH_SCRIPTS','./scripts/');
 define('PATH_TEXTES','./languages/');
 define('PATH_ENTITY','./entity/');
+define('PATH_HELPERS','./helpers/');
 
 //sous dossiers
 define('PATH_CSS', PATH_ASSETS.'css/');

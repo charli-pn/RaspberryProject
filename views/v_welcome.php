@@ -2,7 +2,7 @@
 
 <div class="row">
     <?php foreach ($allAlbums as $album) {
-        $idAlbum = $album->get_idAlbum() ?>
+        $idAlbum = $album->get_idAlbum() ; echo PATH_IMAGES . $album->get_picture()?>
         <div class="col s3">
             <div class="card">
                 <div class="card-image">
