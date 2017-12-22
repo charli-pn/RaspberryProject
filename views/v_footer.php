@@ -6,9 +6,7 @@
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">The Raspberry Pi Projet target</h5>
-                <p class="grey-text text-lighten-4">Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem</p>
-
-
+                <p class="grey-text text-lighten-4">With this project, you can upload and listen all your songs from your Raspberry Pi song's !</p>
             </div>
             <div class="col l3 s12">
                 <h5 class="white-text">Links</h5>
