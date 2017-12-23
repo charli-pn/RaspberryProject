@@ -13,6 +13,14 @@ class SongDAO extends DAO {
         }
     }
     
+    public function exist($title) {
+        if ($req = DAO::queryRow("SELECT COUNT(*) FROM song WHERE title='$title'")) {
+            return $req[0];
+        } else {
+            return DAO::getErreur();
+        }
+    }
+    
     public function getAlbumSongs($idSong) {
         if ($req = DAO::queryAll("SELECT * FROM song WHERE idAlbum = (SELECT idAlbum FROM song WHERE idSong=$idSong)")) {
             foreach ($req as $song) {
@@ -52,14 +60,6 @@ class SongDAO extends DAO {
         } else {
             return DAO::getErreur();
         }
-    }
-
-    public function updatePicture($idAlbum,$picture) {
-        if ($req = DAO::queryBdd('UPDATE album SET picture = " '.$picture.' " WHERE idAlbum = " '.$idAlbum.' " ')) {
-            return $req;
-        } else {
-            return DAO::getErreur();
-        }                
     }
 
     public function add($title, $autor, $duration, $idAlbum) {

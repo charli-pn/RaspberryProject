@@ -10,7 +10,8 @@
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
-                    <img style="cursor:pointer;" src="<?= PATH_IMAGES . $songInfos['picture'] ?>" onClick="togglePlay()">
+                    <?php $pic = ($songInfos['picture'] != 'Unknown') ? $songInfos['picture'] : 'Unknown.jpg'; ?>
+                    <img style="cursor:pointer;" src="<?= PATH_IMAGES . $pic ?>" onClick="togglePlay()">
                     <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onClick="togglePlay()"><i class="material-icons" id="PausePlay">play_arrow</i></a>
                 </div>
                 <div class="card-content">
@@ -55,6 +56,21 @@
         </div>
     </div>
 
+<?php } else {
+    ?>
+    <div class="section row">
+        <div class="col s12 m6">
+            <div class="card grey lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title">Ah !</span>
+                    <p>You haven't upload any music yet.</p>
+                </div>
+                <div class="card-action">
+                    <a href="<?= ADD_PAGE ?>">Upload music !</a>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php } ?>
 
 <?php require_once(PATH_VIEWS . "footer.php"); ?>

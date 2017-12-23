@@ -20,6 +20,21 @@
         }
         ?>
     </div>
+<?php } else {
+    ?>
+    <div class="section row">
+        <div class="col s12 m6">
+            <div class="card grey lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title">Ah !</span>
+                    <p>You haven't upload any album yet.</p>
+                </div>
+                <div class="card-action">
+                    <a href="<?= ADD_PAGE ?>">Upload music !</a>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php } ?>
 
 <?php require_once(PATH_VIEWS . "footer.php"); ?>

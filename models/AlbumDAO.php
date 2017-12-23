@@ -39,7 +39,7 @@ class AlbumDAO extends DAO {
     }
     
     public function getAllAlbums() {
-        if ($req = DAO::queryAll('SELECT * FROM album')) {
+        if ($req = DAO::queryAll("SELECT * FROM album WHERE title != 'Unknown'")) {
             foreach ($req as $alb) {
                 $res[] = new Album($alb['idAlbum'], $alb['title'], $alb['autor'], $alb['picture']);
             }
