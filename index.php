@@ -7,6 +7,10 @@
 require_once('./config/configuration.php');
 require_once(PATH_TEXTES.LANG.'.php');
 
+if(OS=="Windows")
+{
+$output = shell_exec('taskkill /F /IM "vlc.exe"');
+}
 //vérification de la page demandée 
 
 if(isset($_GET['page']) && is_file(PATH_CONTROLLERS.$_GET['page'].".php")) 

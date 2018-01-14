@@ -17,6 +17,8 @@ const LANG ='en-GB';
 const AUTEUR = 'CHARLOTTE - FLORIAN - KYLE - SICHIALUN'; 
 const DESCRI = "KyaPlay web page";
 
+const OS = "Windows";
+
 //dossiers racines du site
 define('PATH_CONTROLLERS','./controllers/c_');
 define('PATH_ASSETS','./assets/');

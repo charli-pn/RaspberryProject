@@ -29,5 +29,62 @@ if (!empty($allSongs)) {
     $extensionTitle = $songInfos['songTitle'];
     $noExtensionTitle = substr($extensionTitle, 0, strripos($extensionTitle, '.'));
 }
+    
+if(OS=="Windows")
+{
+    if(isset($_GET['mode'])){
+        $mode = htmlspecialchars($_GET['mode']);
+        if($mode == "player"){
+            $vlc = "\"c:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe\"";
+            $song_path = "\"C:\\wamp64\\www\\RaspberryProject\\assets\\audio\\";
+            $song_file = $songInfos['songTitle'];
+            $end_cmd = "\" -I dummy vlc://quit";
+            $commmand = $vlc." ".$song_path.$song_file.$end_cmd;
+            exec('start /B "window_play" '.$commmand,$output,$return);
+            require_once(PATH_VIEWS . 'player.php');
+        }
+        if($mode == "stream"){
+            $vlc = "\"c:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe\"";
+            $song_path = "\"C:\\wamp64\\www\\RaspberryProject\\assets\\audio\\";
+            $song_file = $songInfos['songTitle'];
+            $end_cmd = "\" -I dummy :sout=#http{mux=ffmpeg{mux=flv},dst=:8080/} :sout-keep vlc://quit";
+            $commmand = $vlc." ".$song_path.$song_file.$end_cmd;
+            exec('start /B "window_stream" '.$commmand,$output,$return);
+            require_once(PATH_VIEWS . 'stream.php');
+        }
+    }else{
+        require_once(PATH_VIEWS . 'web_player.php');
+    }
+}
+else if(OS=="Linux")
+{
+    if(isset($_GET['mode'])){
+        $mode = htmlspecialchars($_GET['mode']);
+        if($mode == "player"){
+            $vlc = "vlc";
+            $song_path = "\"/var/www/RaspberryProject/assets/audio/";
+            $song_file = $songInfos['songTitle'];
+            $end_cmd = "\" -I dummy vlc://quit"."> /dev/null 2>&1 &";
+            $commmand = $vlc." ".$song_path.$song_file.$end_cmd;
+            exec($commmand,$output,$return);
+            require_once(PATH_VIEWS . 'player.php');
+        }
+        if($mode == "stream"){
+            $vlc = "vlc";
+            $song_path = "\"/var/www/RaspberryProject/assets/audio/";
+            $song_file = $songInfos['songTitle'];
+            $end_cmd = "\" -I dummy :sout=#http{mux=ffmpeg{mux=flv},dst=:8080/} :sout-keep vlc://quit"."> /dev/null 2>&1 &";
+            $commmand = $vlc." ".$song_path.$song_file.$end_cmd;
+            exec($commmand,$output,$return);
+            require_once(PATH_VIEWS . 'stream.php');
+        }
+    }else{
+        require_once(PATH_VIEWS . 'web_player.php');
+    }
+}
 
-require_once(PATH_VIEWS . 'play.php');
+
+
+//<?= PATH_AUDIO . $songInfos['songTitle'] //?>
+
+
