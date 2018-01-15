@@ -55,7 +55,7 @@ class SongDAO extends DAO {
     }
     
     public function getSongInfos($idSong) {
-        if ($req = DAO::queryRow("SELECT s.title AS songTitle, a.title AS albumTitle, a.picture AS picture FROM song s JOIN Album a ON s.idAlbum=a.idAlbum WHERE s.idSong=$idSong")) {
+        if ($req = DAO::queryRow("SELECT s.title AS songTitle, a.title AS albumTitle, a.picture AS picture FROM song s JOIN album a ON s.idAlbum=a.idAlbum WHERE s.idSong=$idSong")) {
             return $req;
         } else {
             return DAO::getErreur();
